@@ -1,21 +1,29 @@
 #include <iostream>
+#include <string>
 #include <image.h>
 #include <vector>
 
 
 int main() {
-    std::cout << "hello world" << std::endl;
+    //make some test data to add to file
     std::vector<int> img1_data(100,1);
     igg::Image im1(10 ,10, img1_data);
 
-    int numcols = im1.cols();
-    std::cout << numcols << std::endl;
+    std::cout << "rstatus of output: "<< im1.WriteToPgm("./test_output.ascii.pgm") << std::endl;
 
-    std::cout << im1.at(2,2) << std::endl;
+    std::cout << "rows before: " << im1.rows() << std::endl;
+    std::cout << "size after: " << im1.size() << std::endl;
 
-    im1.at(2,2) = 69;
+    std::string filepath = "../data/lena.ascii.pgm";
+    im1.FillFromPgm(filepath);
 
-    std::cout << im1.at(2,2) << std::endl;
+    std::cout << "rows after: " << im1.rows() << std::endl;
+    std::cout << "size after: " << im1.size() << std::endl;
+    
+    
+    
+
+    
 
     return 0;
 }

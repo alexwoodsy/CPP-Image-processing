@@ -286,7 +286,7 @@ SLURM_SRUN_COMMAND:FILEPATH=SLURM_SRUN_COMMAND-NOTFOUND
 SVNCOMMAND:FILEPATH=SVNCOMMAND-NOTFOUND
 
 //Path to a library.
-TOOLS:FILEPATH=TOOLS-NOTFOUND
+TOOLS:FILEPATH=/home/alex/projects/igg_image/lib/libio_tools.so
 
 //Value Computed by CMake
 gtest_BINARY_DIR:STATIC=/home/alex/projects/igg_image/build/gtest
@@ -312,6 +312,9 @@ gtest_hide_internal_symbols:BOOL=OFF
 
 //Dependencies for the target
 gtest_main_LIB_DEPENDS:STATIC=general;gtest;
+
+//Dependencies for the target
+image_LIB_DEPENDS:STATIC=general;/home/alex/projects/igg_image/lib/libio_tools.so;
 
 //Value Computed by CMake
 initial_matrix_BINARY_DIR:STATIC=/home/alex/projects/igg_image/build

@@ -6,13 +6,27 @@
 
 #IncludeRegexTransform: 
 
+../src/igg_image/io_tools.h
+fstream
+-
+string
+-
+vector
+-
+
 /home/alex/projects/igg_image/src/igg_image/image.cpp
+iostream
+-
+string
+-
 ./image.h
 /home/alex/projects/igg_image/src/igg_image/image.h
-iostream
+io_tools.h
 -
 
 /home/alex/projects/igg_image/src/igg_image/image.h
 vector
+-
+string
 -
 

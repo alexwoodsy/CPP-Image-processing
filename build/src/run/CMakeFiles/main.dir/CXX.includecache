@@ -9,9 +9,13 @@
 ../src/igg_image/image.h
 vector
 -
+string
+-
 
 /home/alex/projects/igg_image/src/run/main.cpp
 iostream
+-
+string
 -
 image.h
 -
